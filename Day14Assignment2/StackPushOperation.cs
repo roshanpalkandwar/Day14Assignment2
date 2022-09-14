@@ -7,7 +7,7 @@ using System.Xml.Linq;
 
 namespace Day14Assignment2
 {
-    internal class StackPushOperation
+    internal class StackPeekPopOperation
     {
         Node top;
         public void Push(int data)
@@ -38,5 +38,38 @@ namespace Day14Assignment2
             }
         }
 
+        public void Peek()
+        {
+            if (this.top == null)
+            {
+                Console.WriteLine("Stack is empty");
+            }
+            Console.WriteLine("{0} is on the top of the stack", this.top.data); ;
+        }
+
+        public void Pop()
+        {
+            if (top == null)
+            {
+                Console.WriteLine("Stack is empty");
+            }
+            Console.WriteLine("{0} is deleted from the stack ", top.data);
+            top = top.next;
+        }
+
+        public void IsEmpty()
+        {
+            while (this.top != null)
+            {
+
+                Peek();
+                Console.WriteLine();
+                Pop();
+                Console.WriteLine();
+
+            }
+            Display();
+        }
     }
 }
+
