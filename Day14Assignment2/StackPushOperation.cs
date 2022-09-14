@@ -12,6 +12,7 @@ namespace Day14Assignment2
         Node top;
         public void Push(int data)
         {
+            
             Node newNode = new Node(data);
             if (top == null)
             {
@@ -70,6 +71,6 @@ namespace Day14Assignment2
             }
             Display();
         }
-    }
+    }   
 }
 
